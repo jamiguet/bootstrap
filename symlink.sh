@@ -5,7 +5,9 @@ LINKED_FILES=" opt/emacs/emacs.d opt/bin/ opt/emacs/.gnus opt/emacs/emacs.d/ opt
 cd ~
 
 for file in $LINKED_FILES; do
+    if [ -e `basename $file` ]; then
+	rm -rf `basename $file`
+    fi
     ln -s $file
 done
 
-g

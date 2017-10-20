@@ -4,5 +4,5 @@ apt install -y git
 
 useradd -m -p welcome123 jamiguet
 cd /home/jamiguet
-cp /bootstrap/* ./
+cp  /bootstrap/* ./
 

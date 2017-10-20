@@ -9,6 +9,19 @@
 
 export TARGET_VERSION=17.04
 
+cat <<EOF > testSetup.sh
+#!/bin/bash
+apt update 
+apt install -y git
 
-docker run -iat --rm docker.registry.com:ubuntu/$TARGET_VERSION  ./bootstrap.sh
+useradd -m -p welcome123 jamiguet
+cd /home/jamiguet
+cp  /bootstrap/* ./
+
+EOF
+
+chmod u+x testSetup.sh
+
+
+docker run -it --rm -v$(pwd):/bootstrap -w/bootstrap ubuntu:$TARGET_VERSION bash -c "./testSetup.sh; ./bootstrap.sh; bash"
 

@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # All scripts being run. Order matters
-SCRIPTS= "apt_install.sh symlink.sh"
+SCRIPTS="apt_install.sh symlink.sh"
 
-git clone jamiguet/bootstap
+
+git clone git@github.com:jamiguet/bootstrap.git
 
 # Runs all the scripts
 for file in $SCRIPTS; do

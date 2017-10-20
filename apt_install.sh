@@ -686,5 +686,5 @@ EOF
 
 
 # Install packages from list
-sudo apt install `cat packages.list`
+sudo apt install -y `cat packages.list`
 

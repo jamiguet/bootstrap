@@ -10,7 +10,7 @@ export TARGET_VERSION=17.04
 # 2) create user and install basic dependencies
 # 3) Clone the scripts
 
-cat <<EOF > testSetup.sh
+cat <<EOF > /tmp/testSetup.sh
 #!/bin/bash
 apt update 
 apt install -y git sudo
@@ -26,7 +26,7 @@ sudo -u jamiguet git clone https://github.com/jamiguet/bootstrap.git /home/jamig
 pwd
 EOF
 
-chmod u+x testSetup.sh
+chmod u+x /tmp/testSetup.sh
 
-docker run -it --rm -v$(pwd):/bootstrap -w/bootstrap ubuntu:$TARGET_VERSION bash -c "./testSetup.sh;  sudo -u jamiguet /home/jamiguet/bootstrap/bootstrap.sh; bash"
+docker run -it --rm -v/tmp:/tmp -w/bootstrap ubuntu:$TARGET_VERSION bash -c "/tmp/testSetup.sh;  sudo -u jamiguet /home/jamiguet/bootstrap/bootstrap.sh; bash"
 

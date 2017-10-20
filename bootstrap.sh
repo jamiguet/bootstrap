@@ -4,7 +4,7 @@
 SCRIPTS="apt_install.sh symlink.sh"
 
 
-git clone git@github.com:jamiguet/bootstrap.git
+git clone https://github.com/jamiguet/bootstrap.git
 
 # Runs all the scripts
 for file in $SCRIPTS; do

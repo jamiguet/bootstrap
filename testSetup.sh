@@ -3,8 +3,10 @@ apt update
 apt install -y git sudo
 
 useradd -m -p welcome123 jamiguet
-sudo su - jamiguet
+echo "jamiguet ALL=(ALL:ALL) ALL" >/etc/sudoers.d/jamiguet
 
-cp  /bootstrap/* ./
+
+sudo -u jamiguet git clone https://github.com/jamiguet/bootstrap.git /home/jamiguet/bootstrap
+
 
 pwd

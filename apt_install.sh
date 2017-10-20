@@ -41,10 +41,9 @@ sudo apt update
 
 cat <<EOF > packages.list
 
-emacs24 vim spideroakone svn subversion octave spotify-client scala
+emacs24 vim spideroakone subversion octave spotify-client scala
 vim latexmk texlive-fonts-recommended texlive-latex-extra transfig
 epstool fort77 libpcre3 libpcre3-dev 
-
 
 EOF
 

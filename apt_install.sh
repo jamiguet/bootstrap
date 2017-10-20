@@ -3,7 +3,7 @@
 # setup sources
 
 
-cat <<EOF > /tmp/boostrap.list
+cat <<EOF > /tmp/bootstrap.list
 deb [arch=amd64] https://repo.skype.com/deb stable main
 deb http://ch.archive.ubuntu.com/ubuntu/ zesty-backports main restricted universe multiverse
 deb http://ch.archive.ubuntu.com/ubuntu/ zesty main restricted

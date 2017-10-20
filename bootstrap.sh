@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # All scripts being run. Order matters
-SCRIPTS="apt_install.sh symlink.sh"
+SCRIPTS="apt_install.sh spiderOak.sh symlink.sh"
 
 cd $HOME
 

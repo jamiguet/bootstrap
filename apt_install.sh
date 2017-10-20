@@ -8,7 +8,6 @@ deb [arch=amd64] https://repo.skype.com/deb stable main
 deb http://ppa.launchpad.net/ansible/ansible/ubuntu yakkety main
 deb http://repository.spotify.com stable non-free 
 deb http://apt.spideroak.com/ubuntu-spideroak-hardy/ release restricted
-
 EOF
 
 sudo cp /tmp/bootstrap.list /etc/apt/sources.list.d/
@@ -21,11 +20,9 @@ sudo apt update
 
 
 cat <<EOF > packages.list
-
 emacs24 vim spideroakone subversion octave spotify-client scala
 vim latexmk texlive-fonts-recommended texlive-latex-extra transfig
 epstool fort77 libpcre3 libpcre3-dev 
-
 EOF
 
 

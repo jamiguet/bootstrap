@@ -3,7 +3,7 @@
 # setup sources
 
 
-sudo cat <<EOF > /etc/apt/sources.list.d/boostrap.list
+cat <<EOF > /tmp/boostrap.list
 deb [arch=amd64] https://repo.skype.com/deb stable main
 deb http://ch.archive.ubuntu.com/ubuntu/ zesty-backports main restricted universe multiverse
 deb http://ch.archive.ubuntu.com/ubuntu/ zesty main restricted
@@ -30,7 +30,7 @@ deb-src http://security.ubuntu.com/ubuntu zesty-security universe
 
 EOF
 
-
+sudo cp /tmp/bootstrap.list /etc/apt/sources.list.d
 
 sudo apt update
 

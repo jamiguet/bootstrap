@@ -3,8 +3,7 @@
 # All scripts being run. Order matters
 SCRIPTS="apt_install.sh symlink.sh"
 
-
-git clone https://github.com/jamiguet/bootstrap.git
+cd $HOME
 
 # Runs all the scripts
 for file in $SCRIPTS; do

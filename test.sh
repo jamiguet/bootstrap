@@ -17,7 +17,7 @@ mkdir -p /tmp/$$
 cat <<EOF > /tmp/$$/testSetup.sh
 #!/bin/bash
 apt update 
-apt install -y git sudo
+apt install -y git sudo dirmngr
 
 useradd -m -p welcome123 jamiguet
 echo "jamiguet ALL=(ALL:ALL) NOPASSWD: ALL" >/etc/sudoers.d/jamiguet

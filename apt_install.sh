@@ -5,28 +5,9 @@
 
 cat <<EOF > /tmp/bootstrap.list
 deb [arch=amd64] https://repo.skype.com/deb stable main
-deb http://ch.archive.ubuntu.com/ubuntu/ zesty-backports main restricted universe multiverse
-deb http://ch.archive.ubuntu.com/ubuntu/ zesty main restricted
-deb http://ch.archive.ubuntu.com/ubuntu/ zesty multiverse
-deb http://ch.archive.ubuntu.com/ubuntu/ zesty universe
-deb http://ch.archive.ubuntu.com/ubuntu/ zesty-updates main restricted
-deb http://ch.archive.ubuntu.com/ubuntu/ zesty-updates multiverse
-deb http://ch.archive.ubuntu.com/ubuntu/ zesty-updates universe
 deb http://ppa.launchpad.net/ansible/ansible/ubuntu yakkety main
 deb http://repository.spotify.com stable non-free 
-deb http://security.ubuntu.com/ubuntu zesty-security main restricted
-deb http://security.ubuntu.com/ubuntu zesty-security multiverse
-deb http://security.ubuntu.com/ubuntu zesty-security universe
-deb-src http://ch.archive.ubuntu.com/ubuntu/ zesty-backports main restricted universe multiverse
-deb-src http://ch.archive.ubuntu.com/ubuntu/ zesty main restricted
-deb-src http://ch.archive.ubuntu.com/ubuntu/ zesty multiverse
-deb-src http://ch.archive.ubuntu.com/ubuntu/ zesty universe
-deb-src http://ch.archive.ubuntu.com/ubuntu/ zesty-updates main restricted
-deb-src http://ch.archive.ubuntu.com/ubuntu/ zesty-updates multiverse
-deb-src http://ch.archive.ubuntu.com/ubuntu/ zesty-updates universe
-deb-src http://security.ubuntu.com/ubuntu zesty-security main restricted
-deb-src http://security.ubuntu.com/ubuntu zesty-security multiverse
-deb-src http://security.ubuntu.com/ubuntu zesty-security universe
+deb http://apt.spideroak.com/ubuntu-spideroak-hardy/ release restricted
 
 EOF
 

@@ -30,7 +30,7 @@ deb-src http://security.ubuntu.com/ubuntu zesty-security universe
 
 EOF
 
-sudo cp /tmp/bootstrap.list /etc/apt/sources.list.d
+sudo cp /tmp/bootstrap.list /etc/apt/sources.list.d/
 
 sudo apt update
 
@@ -475,16 +475,7 @@ libxtst6 libxv1 libxvidcore4 libxvmc1 libxxf86dga1 libxxf86vm-dev
 libxxf86vm1 libyajl2 libyaml-0-2 libyaml-libyaml-perl
 libyaml-tiny-perl libyelp0 libzbar0 libzeitgeist-1.0-1
 libzeitgeist-2.0-0 libzip4 libzmq5 libzmqpp4 libzvbi-common libzvbi0
-libzzip-0-13 licensecheck light-themes lightdm lintian linux-base
-linux-firmware linux-generic linux-headers-4.10.0-33
-linux-headers-4.10.0-33-generic linux-headers-4.10.0-35
-linux-headers-4.10.0-35-generic linux-headers-generic
-linux-image-4.10.0-33-generic linux-image-4.10.0-35-generic
-linux-image-4.4.0-59-generic linux-image-extra-4.10.0-33-generic
-linux-image-extra-4.10.0-35-generic linux-image-extra-4.4.0-59-generic
-linux-image-extra-virtual linux-image-generic linux-libc-dev
-linux-signed-generic linux-signed-image-4.10.0-33-generic
-linux-signed-image-4.10.0-35-generic linux-signed-image-generic
+libzzip-0-13 licensecheck light-themes lightdm lintian
 linux-sound-base lmodern locales login logrotate lsb-base lsb-release
 lshw lsof ltrace m17n-db m4 make makedev man-db manpages manpages-dev
 mawk media-player-info mediascanner2.0 memtest86+ mesa-common-dev

@@ -9,6 +9,8 @@ export TARGET_VERSION=17.04
 # 1) update packages
 # 2) create user and install basic dependencies
 # 3) Clone the scripts
+# 4) Run the scripts as the newly created user
+# 5) bootstrap is hence run as a git clone execute combo
 
 cat <<EOF > /tmp/testSetup.sh
 #!/bin/bash
@@ -16,17 +18,15 @@ apt update
 apt install -y git sudo
 
 useradd -m -p welcome123 jamiguet
-echo "jamiguet ALL=(ALL:ALL) ALL" >/etc/sudoers.d/jamiguet
+echo "jamiguet ALL=(ALL:ALL) NOPASSWD: ALL" >/etc/sudoers.d/jamiguet
 chmod 0440 /etc/sudoers.d/jamiguet
 
 
 sudo -u jamiguet git clone https://github.com/jamiguet/bootstrap.git /home/jamiguet/bootstrap
 
-
-pwd
 EOF
 
 chmod u+x /tmp/testSetup.sh
 
-docker run -it --rm -v/tmp:/tmp -w/bootstrap ubuntu:$TARGET_VERSION bash -c "/tmp/testSetup.sh;  sudo -u jamiguet /home/jamiguet/bootstrap/bootstrap.sh; bash"
+docker run -it --rm -v/tmp:/tmp ubuntu:$TARGET_VERSION bash -c "/tmp/testSetup.sh; sudo su - jamiguet /home/jamiguet/bootstrap/bootstrap.sh; bash"
 

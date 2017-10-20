@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# All scripts being run. Order matters
+SCRIPTS= "apt_install.sh spider.sh"
+
+# TODO make this single script for also posting updated packages
+
+
+# Minimal requirement is wget, we should have that
+# If not we get it
+wget_installed=`which wget |wc -l`
+if [[ $wget_installed -eq 0 ]]; then
+    sudo apt install wget
+fi
+
+# Download all scripts
+for file in $SCRIPTS; do
+    wget http://jamiguet.blinkenshell.org/bootstrap/$file
+done
+
+# Runs all the scripts
+for file in $SCRIPTS; do
+    ./$file
+done
+
+# Put in here some basic health tests
+# If we can figure out some
+./emacs.d -> opt/emacs/emacs.d
+./bin -> opt/bin/
+./.gnus -> opt/emacs/.gnus
+./.emacs.d -> opt/emacs/emacs.d/
+./.signature -> opt/skel/.signature
+./.bash_aliases -> opt/skel/bash_aliases
+./.emacs -> opt/emacs/.emacs

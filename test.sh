@@ -3,7 +3,7 @@
 # The test plan is that we run each of the scripts on an ubuntu image
 # that matches the version that we are running
 
-export TARGET_VERSION=17.04
+export TARGET_VERSION=17.10
 
 # Before we can run the script to test them we do the following setup
 # 1) update packages
@@ -29,6 +29,7 @@ sudo -u jamiguet git clone https://github.com/jamiguet/bootstrap.git /home/jamig
 EOF
 
 chmod u+x /tmp/$$/testSetup.sh
+xhost +
 
 docker run -it --rm -v/tmp/$$:/tmp/$$ ubuntu:$TARGET_VERSION bash -c "/tmp/$$/testSetup.sh; sudo su - jamiguet /home/jamiguet/bootstrap/bootstrap.sh; bash"
 

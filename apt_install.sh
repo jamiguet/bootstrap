@@ -16,6 +16,8 @@ sudo cp /tmp/bootstrap.list /etc/apt/sources.list.d/
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 13B00F1FD2C19886
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367 
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 573E3D1C51AE1B3D
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1F3045A5DF7587C3
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EFDC8610340D9411
 sudo apt update
 
 

@@ -18,12 +18,11 @@ REPO_KEYS="EFDC8610341D9410 13B00F1FD2C19886 93C4A3FD7BB9C367 573E3D1C51AE1B3D 1
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $REPO_KEYS 
 sudo apt update
 
-
 cat <<EOF > packages.list 
 
 emacs25 vim spideroakone subversion octave spotify-client scala vim
 latexmk texlive-fonts-recommended texlive-latex-extra transfig epstool
-fort77 libpcre3 libpcre3-dev morris
+fort77 libpcre3 libpcre3-dev morris wget
 
 EOF
 
@@ -31,3 +30,8 @@ EOF
 # Install packages from list
 sudo apt install -y `cat packages.list`
 
+# supplementary non apt packages
+
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.8.2-amd64.deb -O ~/Downloads/slack-desktop-2.8.2-amd64.deb
+
+sudo dpkg --install /home/jamiguet/Downloads/slack-desktop-2.8.2-amd64.deb

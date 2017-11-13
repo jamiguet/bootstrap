@@ -9,5 +9,6 @@ chmod 0440 /etc/sudoers.d/jamiguet
 
 sudo -u jamiguet git clone https://github.com/jamiguet/bootstrap.git /home/jamiguet/bootstrap
 
+sudo -u jamiguet mkdir -p /home/jamiguet/Downloads
 
 pwd

@@ -22,7 +22,7 @@ cat <<EOF > packages.list
 
 emacs25 vim spideroakone subversion octave spotify-client scala vim
 latexmk texlive-fonts-recommended texlive-latex-extra transfig epstool
-fort77 libpcre3 libpcre3-dev morris wget
+fort77 libpcre3 libpcre3-dev morris wget htop 
 
 EOF
 
@@ -32,6 +32,5 @@ sudo apt install -y `cat packages.list`
 
 # supplementary non apt packages
 
-wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.8.2-amd64.deb -O ~/Downloads/slack-desktop-2.8.2-amd64.deb
+# TODO Put in here Rambox download
 
-sudo dpkg --install /home/jamiguet/Downloads/slack-desktop-2.8.2-amd64.deb

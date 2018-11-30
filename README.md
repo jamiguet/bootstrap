@@ -16,6 +16,3 @@ This enables to validate if any of my steps break.
 
 My username is hardcoded in quite a few places so it may not work for you.
 
-## TODO
-* Add python 
-* Setup wirtual environments

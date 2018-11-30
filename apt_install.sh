@@ -8,7 +8,7 @@ sudo apt install dialog
 
 export DEBIAN_FRONTEND=noninteractive
 
-sudo apt upgrade -y
+sudo apt upgrade --install-suggests -y
 
 # setup sources
 cat <<EOF > /tmp/bootstrap.list
@@ -38,7 +38,7 @@ EOF
 
 
 # Install packages from list
-sudo apt install -y `cat packages.list`
+sudo apt install --install-suggests -y `cat packages.list`
 
 # supplementary non apt packages
 

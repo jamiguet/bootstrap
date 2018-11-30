@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # All scripts being run. Order matters
-SCRIPTS="apt_install.sh spiderOak.sh symlink.sh"
+SCRIPTS="apt_install.sh python.sh spiderOak.sh symlink.sh"
 
 cd $HOME
 
@@ -12,4 +12,5 @@ done
 
 # Put in here some basic health tests
 # If we can figure out some
+
 

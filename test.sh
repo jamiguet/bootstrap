@@ -3,7 +3,7 @@
 # The test plan is that we run each of the scripts on an ubuntu image
 # that matches the version that we are running
 
-export TARGET_VERSION=17.10
+export TARGET_VERSION=18.10
 
 # Before we can run the script to test them we do the following setup
 # 1) update packages
